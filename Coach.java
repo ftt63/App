@@ -1,8 +1,22 @@
-public abstract class Coach extends Team {
+public class Coach extends Employee {
+    private int careerWins;
 
-    public Coach(String name, double salary, int careerGames, int yearsInHockey, int jerseyNumber,
-            int careerMinutesPlayed, int goalsAgainst, int saves, int wins, int shutouts) {
-        super(name, salary, careerGames, yearsInHockey, jerseyNumber, careerMinutesPlayed, goalsAgainst, saves, wins, shutouts);
+    public Coach(String name, double salary, int careerGames, int yearsInHockey, int careerWins) {
+        super(name, salary, careerGames, yearsInHockey);
+        this.careerWins = careerWins;
     }
-    
+
+    public int getCareerWins() {
+        return careerWins;
+    }
+
+    public double getWinningPercentage() {
+        return (double) careerWins / getCareerGames();
+    }
+
+    @Override
+    public void yearlyUpdate(int gamesPlayed) {
+        setCareerGames(getCareerGames() + gamesPlayed);
+        setYearsInHockey(getYearsInHockey() + 1);
+    }
 }
