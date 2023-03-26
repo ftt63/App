@@ -1,0 +1,100 @@
++---------------+
+|     Team      |
++-----------------------------+
+| -coach: Coach               |
+| -goalie: Goaltender         |
+| -skaters: ArrayList<Skater> |
++---------------------------------------------------+
+| +Team(coach: Coach, goalie: Goaltender)           |
+| +getCoach(): Coach                                |
+| +getGoaltender(): Goaltender                      |
+| +getNumSkaters(): int                             |
+| +getSkaterByName(name: String): Skater            |
+| +addSkater(s: Skater)                             |
+| +removeSkater(name: String)                       |
+| +replaceCoach(c: Coach)                           |
+| +replaceGoaltender(g: Goaltender)                 |
+| +averagePointsPerGame(): double                   |
+| +totalSalary(): double                            |
+| +teamValue(): double                              |
+| +getPlayerNameByJerseyNumber(number: int): String |
++---------------------------------------------------+
+         /\
+         |
++---------------+
+|   Employee    |
++---------------------+
+| -name: String       |
+| -salary: double     |
+| -careerGames: int   |
+| -yearsInHockey: int |
++-----------------------------------------------------------+
+| +Employee(name: String, salary: double, careerGames: int, |
+| yearsInHockey: int)                                       |
+| +getName(): String                                        |
+| +getSalary(): double                                      |
+| +getCareerGames(): int                                    |
+| +getYearsInHockey(): int                                  |
+| +yearlyUpdate(gamesPlayed: int)                           |
+| +abstract getValue(): double                              |
+| +toString(): String                                       |
++-----------------------------------------------------------+
+         /\
+         |
++---------------+
+|    Player     |
++---------------------+
+| -jerseyNumber: int  |
+| -minutesPlayed: int |
++-----------------------------------------------------------+
+| +Player(name: String, salary: double, careerGames: int,   | 
+|yearsInHockey: int, jerseyNumber: int, minutesPlayed: int) |
+| +getJerseyNumber(): int                                   |
+| +getMinutesPlayed(): int                                  |
+| +yearlyUpdate(gamesPlayed: int, minutesPlayed: int)       |
+| +toString(): String                                       |
+| +abstract getValue(): double                              |
++-----------------------------------------------------------+
+         /\
+         |
++---------------+
+|    Skater     |
++---------------+
+| -goals: int   |
+| -assists: int |
++-------------------------------------------------------------+
+| +Skater(name: String, salary: double, careerGames: int,     |
+| yearsInHockey: int, jerseyNumber: int, minutesPlayed: int,  |
+| goals: int, assists: int)                                   |
+| +getGoals(): int                                            |
+| +getAssists(): int                                          |
+| +yearlyUpdate(gamesPlayed: int, minutesPlayed: int,         | 
+|goals: int, assists: int)                                    |
+| +getPoints(): int                                           |
+| +getValue(): double                                         |
+| +toString(): String                                         |
++-------------------------------------------------------------+
+         |
+         |
++---------------+
+|  Goaltender   |
++--------------------+
+| -goalsAgainst: int |
+| -saves: int        |
+| -wins: int         |
+| -shutouts: int     |
++---------------------------------------------------------------+
+| +Goaltender(name: String, salary: double,                     | 
+| +careerGames: int, yearsInHockey: int, jerseyNumber: int,      |
+| +minutesPlayed: int, goalsAgainst: int, saves: int, wins: int, | 
+| +shutouts: int)                                                |
+| +getGoalsAgainst(): int                                       |
+| +getSaves(): int                                              |
+| +getWins(): int                                               |
+| +getShutouts(): int                                           |
+| +yearlyUpdate(gamesPlayed: int, minutesPlayed: int,           |
+| +goalsAgainst: int, saves: int, wins: int, shutouts: int)      |
+| +getGAA(): double                                             |
+| +getValue(): double                                           |
+| +toString(): String                                           |
++---------------------------------------------------------------+
